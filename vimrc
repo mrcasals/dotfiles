@@ -32,6 +32,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-cucumber'
 Bundle 'bbommarito/vim-slim'
 
+Bundle 'scrooloose/nerdtree'
+
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'hced/bufkill-vim'
 
@@ -303,6 +305,8 @@ let g:ctrlp_map = '<leader>o'
 " Surround
 " ,' switches ' and "
 nnoremap <leader>' ""yls<c-r>={'"': "'", "'": '"'}[@"]<cr><esc>
+" NERDtree
+nmap <silent> <leader>p :NERDTreeToggle<cr>%
 
 " --------------------
 " CUSTOM CONFIGURATION

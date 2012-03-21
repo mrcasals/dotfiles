@@ -33,7 +33,7 @@ These are the new Codegram vimfiles!
 
 If you trust me, do this:
 
-    rm -fR ~/.vim && git clone https://github.com/codegram/vimfiles.git ~/.vim && rm ~/.vimrc && ln -s ~/.vim/vimrc ~/.vimrc && git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle && vim +BundleInstall +qa! && echo "Done! :)"
+    rm -fR ~/.vim && git clone https://github.com/codegram/vimfiles.git ~/.vim && rm ~/.vimrc && ln -s ~/.vim/vimrc ~/.vimrc && git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle && vim +BundleInstall +qa! && clear && echo "Done! :)"
 
 ### Manual way
 
@@ -62,6 +62,10 @@ TA-DA! Everything's done!
 
 * The leader key is `,` (comma).
 
+### Files
+
+* `,n` renames current file, asking for the new name.
+
 ### Moving
 * Arrow keys are disabled.
 * `jk` is mapped to `<ESC>`, so you don't have to reach out to `<ESC>`.
@@ -77,11 +81,16 @@ TA-DA! Everything's done!
 * `<leader>D` closes ALL the buffers.
 
 ### Splits
-* `,v` opens a new vertical split.
+* `,v` opens a new vertical split and switches to it.
 * `<C-h>` switches to the left split.
 * `<C-j>` switches to the split below.
 * `<C-k>` switches to the split above.
 * `<C-l>` switches to the right split.
+
+### Running tests (Ruby)
+
+* `,t` runs the current test file (RSpec, MiniTest or Cucumber).
+* `,T` runs the specific test under the cursor (RSpec or Cucumber).
 
 ### Other
 
@@ -147,6 +156,7 @@ Integration with Rails.
 
 * `cs"'` changes surround from `"` to `'`.
 * `ysiw"` surrounds inside the word with `"`.
+* `,'` switches `'` and `"` quotes.
 
 ### [vim-tcomment](https://github.com/jmartindf/vim-tcomment)
 

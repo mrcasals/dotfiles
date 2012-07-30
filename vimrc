@@ -312,6 +312,7 @@ nmap <silent> <leader>p :NERDTreeToggle<cr>%
 let g:syntastic_check_on_open=1
 let g:syntastic_echo_current_error=1
 let g:syntastic_auto_jump=1
+let g:syntastic_auto_loc_list=1
 
 " --------------------
 " CUSTOM CONFIGURATION

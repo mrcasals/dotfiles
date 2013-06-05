@@ -19,6 +19,7 @@ let maplocalleader = "."
 " -------
 
 Bundle 'rking/ag.vim'
+Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-endwise'
 Bundle 'Townk/vim-autoclose'
@@ -44,6 +45,9 @@ Bundle 'vim-scripts/ctags.vim'
 Bundle 'hced/bufkill-vim'
 
 Bundle 'scrooloose/syntastic'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'nono/vim-handlebars'
+Bundle 'codegram/vim-haml2slim'
 
 Bundle 'codegram/vim-haml2slim'
 

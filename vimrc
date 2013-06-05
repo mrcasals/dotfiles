@@ -99,7 +99,7 @@ set visualbell
 set cursorline
 set ttyfast
 set textwidth=78
-set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,.gitkeep
+set wildignore+=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,.gitkeep,.DS_Store
 set grepprg=ack
 set textwidth=79
 set formatoptions=n
@@ -305,6 +305,7 @@ map <F9> :tprev<CR>
 
 " Ctrl-p
 let g:ctrlp_map = '<leader>o'
+let g:ctrlp_custom_ignore = '\v[\/](doc|tmp|log|coverage)$'
 
 " Surround
 " ,' switches ' and "

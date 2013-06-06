@@ -47,6 +47,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/vim-handlebars'
 Bundle 'codegram/vim-haml2slim'
+Bundle 'vim-ruby/vim-ruby'
 
 Bundle 'codegram/vim-haml2slim'
 

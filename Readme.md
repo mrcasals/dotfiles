@@ -20,4 +20,3 @@ These dotfiles require this file:
 
 Here you can add your own mapping without risking to lose them when updating the repo :)
 
-Have fun! :)

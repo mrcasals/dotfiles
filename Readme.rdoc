@@ -3,7 +3,7 @@
 
 == Installation
 
-  git clone git://github.com/oriolgual/dotfiles ~/.dotfiles
+  git clone git://github.com/mrcasals/dotfiles ~/.dotfiles
   cd ~/.dotfiles
   rake install
 

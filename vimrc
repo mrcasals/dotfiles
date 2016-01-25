@@ -26,7 +26,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'Townk/vim-autoclose'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'bling/vim-airline'
-Bundle 'kien/ctrlp.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
 
 " Bundle 'mattn/webapi-vim'
 " Bundle 'mattn/gist-vim'
@@ -118,8 +118,8 @@ set colorcolumn=79
 set tw=79
 set t_Co=256
 set iskeyword-=_
-"set clipboard=unnamed
-set re=1
+" set clipboard=unnamed
+" set re=1
 
 if has("gui_running")
     set guioptions-=T " no toolbar set guioptions-=m " no menus
@@ -289,7 +289,7 @@ map <F9> :tprev<CR>
 
 " Ctrl-p
 let g:ctrlp_map = '<leader>o'
-let g:ctrlp_custom_ignore = '\v[\/](doc|tmp|log|coverage)$'
+let g:ctrlp_custom_ignore = '\v[\/](doc|tmp|log|coverage|fixtures/cassettes)$'
 
 " Surround
 " ,' switches ' and "

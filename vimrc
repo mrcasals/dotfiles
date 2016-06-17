@@ -59,6 +59,8 @@ Bundle 'majutsushi/tagbar'
 
 Bundle 'elixir-lang/vim-elixir'
 
+Bundle 'leafgarland/typescript-vim'
+
 " Default color theme
 Bundle 'sjl/badwolf'
 colorscheme badwolf

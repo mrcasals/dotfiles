@@ -47,3 +47,4 @@ alias sc="pry --simple-prompt -r config/environment"
 
 alias vi=vim
 alias gss="git status -sb"
+alias git="hub"

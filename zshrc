@@ -17,3 +17,5 @@ export NVM_DIR="/Users/marc/.nvm"
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
+
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin

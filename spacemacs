@@ -301,7 +301,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-    (defun my-setup-indent (n)
+  (defun my-setup-indent (n)
     ;; java/c/c++
     (setq standard-indent n)
     (setq c-basic-offset n)
@@ -344,6 +344,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (spacemacs/toggle-indent-guide-globally-on)
   (setq typescript-indent-level 2)
   (setq json-reformat:indent-width 2)
+  (setq-default evil-escape-key-sequence "jk")
 )
 
 (defun dotspacemacs/user-config ()

@@ -228,7 +228,7 @@ values."
    ;; If non nil a progress bar is displayed when spacemacs is loading. This
    ;; may increase the boot time on some systems and emacs builds, set it to
    ;; nil to boost the loading time. (default t)
-   dotspacemacs-loading-progress-bar nil
+   dotspacemacs-loading-progress-bar t
    ;; If non nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
    dotspacemacs-fullscreen-at-startup nil
@@ -252,13 +252,23 @@ values."
    ;; If non nil show the color guide hint for transient state keys. (default t)
    dotspacemacs-show-transient-state-color-guide t
    ;; If non nil unicode symbols are displayed in the mode line. (default t)
-   ;; dotspacemacs-mode-line-unicode-symbols t
+   dotspacemacs-mode-line-unicode-symbols t
    ;; If non nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters point
    ;; when it reaches the top or bottom of the screen. (default t)
    dotspacemacs-smooth-scrolling t
-   ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
-   ;; derivatives. If set to `relative', also turns on relative line numbers.
+   ;; Control line numbers activation.
+   ;; If set to `t' or `relative' line numbers are turned on in all `prog-mode' and
+   ;; `text-mode' derivatives. If set to `relative', line numbers are relative.
+   ;; This variable can also be set to a property list for finer control:
+   ;; '(:relative nil
+   ;;   :disabled-for-modes dired-mode
+   ;;                       doc-view-mode
+   ;;                       markdown-mode
+   ;;                       org-mode
+   ;;                       pdf-view-mode
+   ;;                       text-mode
+   ;;   :size-limit-kb 1000)
    ;; (default nil)
    dotspacemacs-line-numbers t
    ;; Code folding method. Possible values are `evil' and `origami'.
@@ -341,7 +351,6 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq magit-repository-directories '("~/Code/"))
   (add-to-list 'auto-mode-alist '("\\.js.es6$" . js2-mode))
   (setq js2-strict-missing-semi-warning nil)
-  (spacemacs/toggle-indent-guide-globally-on)
   (setq typescript-indent-level 2)
   (setq json-reformat:indent-width 2)
   (setq-default evil-escape-key-sequence "jk")
@@ -354,6 +363,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (spacemacs/toggle-indent-guide-globally-on)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -374,7 +384,8 @@ you should place your code here."
  '(rspec-spec-command "bundle exec rspec")
  '(rspec-use-bundler-when-possible nil)
  '(rspec-use-zeus-when-possible nil)
- '(safe-local-variable-values (quote ((encoding . utf-8)))))
+ '(safe-local-variable-values (quote ((encoding . utf-8))))
+ '(vc-follow-symlinks t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

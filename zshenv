@@ -7,5 +7,3 @@ export RUBY_GC_HEAP_FREE_SLOTS=$RUBY_HEAP_FREE_MIN
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
-
-if [ -f ~/.zshrc ]; then . ~/.zshrc; fi

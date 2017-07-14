@@ -51,7 +51,6 @@ values."
      osx
      ;; spotify
      (ruby :variables
-           ruby-enable-enh-ruby-mode t
            ruby-version-manager 'chruby
            ruby-test-runner 'rspec
      )
@@ -382,7 +381,6 @@ you should place your code here."
  '(rspec-expose-dsl-globally t)
  '(rspec-rake-command "rake")
  '(rspec-snippets-fg-syntax t)
- '(rspec-spec-command "bundle exec rspec")
  '(rspec-use-bundler-when-possible nil)
  '(rspec-use-zeus-when-possible nil)
  '(safe-local-variable-values (quote ((encoding . utf-8))))

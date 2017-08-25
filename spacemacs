@@ -364,6 +364,10 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (spacemacs/toggle-indent-guide-globally-on)
   (add-to-list 'projectile-globally-ignored-directories "node_modules")
+  (with-eval-after-load 'rspec-mode
+    (if (rspec-spring-p)
+        (setq rspec-spec-command "rspec")
+      (setq rspec-spec-command "bundle exec rspec")))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -381,7 +385,7 @@ you should place your code here."
  '(rspec-expose-dsl-globally t)
  '(rspec-rake-command "rake")
  '(rspec-snippets-fg-syntax t)
- '(rspec-use-bundler-when-possible nil)
+ '(rspec-use-bundler-when-possible t)
  '(rspec-use-zeus-when-possible nil)
  '(safe-local-variable-values (quote ((encoding . utf-8))))
  '(vc-follow-symlinks t))

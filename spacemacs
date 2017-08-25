@@ -364,6 +364,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (spacemacs/toggle-indent-guide-globally-on)
   (add-to-list 'projectile-globally-ignored-directories "node_modules")
+  (setq ruby-insert-encoding-magic-comment nil)
   (with-eval-after-load 'rspec-mode
     (if (rspec-spring-p)
         (setq rspec-spec-command "rspec")

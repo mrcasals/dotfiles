@@ -34,3 +34,4 @@ export NVM_DIR="$HOME/.nvm"
 [[ -f /Users/marc/.nvm/versions/node/v7.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/marc/.nvm/versions/node/v7.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 
 alias rspec="bundle exec rspec"
+alias empresaula_console="rancher exec -it empresaula-production/core-worker bundle exec rails console"

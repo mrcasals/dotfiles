@@ -8,9 +8,10 @@ alias stop_mysql="launchctl unload -w ~/Library/LaunchAgents/com.mysql.mysqld.pl
 
 # Git
 alias g="git status"
+alias gst="git status"
 alias ga="git add"
 alias gaa="git add --all"
-alias gc="git commit -m"
+alias gc="git commit"
 alias gca="git commit -am"
 alias gb="git branch"
 alias gba="git branch -a"

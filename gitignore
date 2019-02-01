@@ -5,3 +5,6 @@
 .#*
 *.trace
 .console_history
+
+.elixir_ls/
+.vscode/

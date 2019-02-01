@@ -24,3 +24,7 @@ if [ -f /Users/marc/.tnsrc ]; then
     source /Users/marc/.tnsrc
 fi
 ###-tns-completion-end-###
+
+  # Set Spaceship ZSH as a prompt
+  autoload -U promptinit; promptinit
+  prompt spaceship

@@ -36,6 +36,8 @@ prompt pure
 # zsh highlighting for pure prompt
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
 # disable closing window with Ctrl-D
 setopt ignore_eof
 

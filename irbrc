@@ -2,6 +2,7 @@
 # put all this in your ~/.irbrc
 require 'rubygems'
 require 'yaml'
+require 'irb/completion'
 
 alias q exit
 

@@ -1,14 +1,8 @@
-# PostgreSQL
-alias start_postgres="launchctl load -w ~/Library/LaunchAgents/org.postgresql.postgres.plist"
-alias stop_postgres="launchctl unload -w ~/Library/LaunchAgents/org.postgresql.postgres.plist"
-
-# MySQL
-alias start_mysql="launchctl load -w ~/Library/LaunchAgents/com.mysql.mysqld.plist"
-alias stop_mysql="launchctl unload -w ~/Library/LaunchAgents/com.mysql.mysqld.plist"
-
 # Git
+alias git="hub"
 alias g="git status"
 alias gst="git status"
+alias gss="git status -sb"
 alias ga="git add"
 alias gaa="git add --all"
 alias gc="git commit -v"
@@ -27,30 +21,13 @@ alias gd="git diff"
 alias gbl="git blame"
 alias gps="git push"
 alias gpl="git pull"
-alias git=hub
 alias ggpush='git push origin "$(git_current_branch)"'
 alias ggpull='git pull origin "$(git_current_branch)"'
 
-# TMUX
-alias ta="tmux attach"
-alias tls="tmux list-sessions"
-alias tk="tmux kill-server"
-# alias t="tmux start && TERM=screen-256color-bce tmux attach"
-
 # Ruby
-alias r="ruby"
-alias i="pry --simple-prompt"
-alias b="bundle"
 alias be="bundle exec"
 alias bi="bundle install"
 alias bu="bundle update"
-
-# Rails console
-alias sc="pry --simple-prompt -r config/environment"
-
-alias vi=vim
-alias gss="git status -sb"
-alias git="hub"
 
 alias heorku="heroku"
 

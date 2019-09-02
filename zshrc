@@ -6,12 +6,6 @@ source ~/.zshrc.local
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-###-tns-completion-start-###
-if [ -f /Users/marc/.tnsrc ]; then
-    source /Users/marc/.tnsrc
-fi
-###-tns-completion-end-###
-
 fpath=(~/.zsh/completions $fpath)
 fpath=(/usr/local/share/zsh/site-functions $fpath)
 autoload -U compinit && compinit

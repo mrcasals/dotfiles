@@ -7,9 +7,6 @@ source ~/.zshrc.local
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
-
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
 export ANDROID_HOME=~/Library/Android/sdk

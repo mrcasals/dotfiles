@@ -29,7 +29,11 @@ alias be="bundle exec"
 alias bi="bundle install"
 alias bu="bundle update"
 
+# Avoid typos
 alias heorku="heroku"
+
+# Reload ZSH config file
+alias reload!='source ~/.zshrc'
 
 function git_current_branch() {
   local ref

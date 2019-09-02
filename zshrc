@@ -66,3 +66,7 @@ setopt incappendhistory     #Immediately append to the history file, not just wh
 # setopt hist_verify            # show command with history expansion to user before running it
 # setopt inc_append_history     # add commands to HISTFILE in order of execution
 # setopt share_history # share command history data
+
+# asdf
+. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash

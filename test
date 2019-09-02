@@ -1,0 +1,29 @@
+if [[ `uname` == "Linux" ]]; then
+  echo "HOLA"
+else
+  echo "ADEU"
+fi
+
+# What OS are we running?
+if command apt > /dev/null; then
+    source $ZSH_CUSTOM/os/debian.zsh
+
+elif command freebsd-version > /dev/null; then
+    source $ZSH_CUSTOM/os/freebsd.zsh
+
+elif [[ `uname` == "Darwin" ]]; then
+    source $ZSH_CUSTOM/os/mac.zsh
+
+else
+    echo 'Unknown OS!'
+fi
+
+# Do we have systemd on board?
+if command systemctl > /dev/null; then
+    source $ZSH_CUSTOM/os/systemd.zsh
+fi
+
+# Ditto Kubernetes?
+if command kubectl > /dev/null; then
+    source $ZSH_CUSTOM/os/kubernetes.zsh
+fi

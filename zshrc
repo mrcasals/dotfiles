@@ -11,7 +11,7 @@ fpath=(/usr/local/share/zsh/site-functions $fpath)
 autoload -U compinit && compinit
 
 # pure prompt
-if [[ "$(uname)" = "Linux" ]] then
+if [[ `uname` = "Linux" ]]; then
   fpath+=('~/.asdf/installs/nodejs/12.9.1/.npm/lib/node_modules/pure-prompt/functions')
 fi
 autoload -U promptinit; promptinit
@@ -19,9 +19,13 @@ prompt pure
 zstyle ':prompt:pure:prompt:success' color green
 
 # zsh highlighting for pure prompt
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+if [[ `uname` = "Linux" ]]; then
+  source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source /home/linuxbrew/.linuxbrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+else
+  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+fi
 
 # disable closing window with Ctrl-D
 setopt ignore_eof
@@ -56,5 +60,10 @@ setopt incappendhistory     #Immediately append to the history file, not just wh
 # setopt share_history # share command history data
 
 # asdf
-. /usr/local/opt/asdf/asdf.sh
-. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+if [[ `uname` = "Linux" ]]; then
+  /home/linuxbrew/.linuxbrew/opt/asdf/asdf.sh
+  /home/linuxbrew/.linuxbrew/opt/asdf/etc/bash_completion.d/asdf.bash
+else
+  /usr/local/opt/asdf/asdf.sh
+  /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+fi

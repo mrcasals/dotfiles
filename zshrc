@@ -6,8 +6,6 @@ source ~/.zshrc.local
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
-
 alias rs="bin/rails s"
 alias rc="bin/rails c"
 

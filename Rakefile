@@ -3,6 +3,8 @@ require 'erb'
 
 desc "install the dot files into user's home directory"
 task :install do
+  system %Q{touch "$HOME/.zshrc.local"}
+
   replace_all = false
   Dir['*'].each do |file|
     next if %w[Rakefile README.rdoc Readme.rdoc LICENSE zsh zshrc].include? file

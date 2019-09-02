@@ -37,6 +37,9 @@ IRB.conf[:PROMPT][:SIMPLE_COLOR] = {
   :RETURN   => "#{ANSI[:GREEN]}=>#{ANSI[:RESET]} %s\n",
   :AUTO_INDENT => true }
 IRB.conf[:PROMPT_MODE] = :SIMPLE_COLOR
+IRB.conf[:EVAL_HISTORY] = 200
+IRB.conf[:SAVE_HISTORY] = 1000
+IRB.conf[:HISTORY_FILE] = "~/.irb_history"
 
 # Loading extensions of the console. This is wrapped
 # because some might not be included in your Gemfile

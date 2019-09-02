@@ -12,8 +12,6 @@ rake install
 
 ## Using your own config along
 
-These dotfiles require this file:
-
 ```
 ~/.zshrc.local
 ```

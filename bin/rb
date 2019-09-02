@@ -1,5 +1,0 @@
-#!/bin/bash
-
-set -e
-
-$MY_RUBY_HOME/bin/ruby $@

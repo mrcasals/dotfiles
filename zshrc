@@ -9,10 +9,6 @@ source ~/.zshrc.local
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
-export ANDROID_HOME=~/Library/Android/sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-
 alias rs="bin/rails s"
 alias rc="bin/rails c"
 

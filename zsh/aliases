@@ -29,6 +29,9 @@ alias be="bundle exec"
 alias bi="bundle install"
 alias bu="bundle update"
 
+alias rs="bin/rails s"
+alias rc="bin/rails c"
+
 # Avoid typos
 alias heorku="heroku"
 

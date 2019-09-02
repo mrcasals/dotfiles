@@ -6,9 +6,6 @@ source ~/.zshrc.local
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-alias rs="bin/rails s"
-alias rc="bin/rails c"
-
 ###-tns-completion-start-###
 if [ -f /Users/marc/.tnsrc ]; then
     source /Users/marc/.tnsrc

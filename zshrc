@@ -10,9 +10,18 @@ fpath=(~/.zsh/completions $fpath)
 fpath=(/usr/local/share/zsh/site-functions $fpath)
 autoload -U compinit && compinit
 
+# asdf
+if [[ `uname` = "Linux" ]]; then
+  /home/linuxbrew/.linuxbrew/opt/asdf/asdf.sh
+  /home/linuxbrew/.linuxbrew/opt/asdf/etc/bash_completion.d/asdf.bash
+else
+  /usr/local/opt/asdf/asdf.sh
+  /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+fi
+
 # pure prompt
 if [[ `uname` = "Linux" ]]; then
-  fpath+=('~/.asdf/installs/nodejs/12.9.1/.npm/lib/node_modules/pure-prompt/functions')
+  fpath+=(`npm root -g`/pure-prompt/functions)
 fi
 autoload -U promptinit; promptinit
 prompt pure
@@ -58,12 +67,3 @@ setopt incappendhistory     #Immediately append to the history file, not just wh
 # setopt hist_verify            # show command with history expansion to user before running it
 # setopt inc_append_history     # add commands to HISTFILE in order of execution
 # setopt share_history # share command history data
-
-# asdf
-if [[ `uname` = "Linux" ]]; then
-  /home/linuxbrew/.linuxbrew/opt/asdf/asdf.sh
-  /home/linuxbrew/.linuxbrew/opt/asdf/etc/bash_completion.d/asdf.bash
-else
-  /usr/local/opt/asdf/asdf.sh
-  /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
-fi

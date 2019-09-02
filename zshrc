@@ -41,10 +41,6 @@ source /usr/local/share/zsh-history-substring-search/zsh-history-substring-searc
 # disable closing window with Ctrl-D
 setopt ignore_eof
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Directory autocompletion, from https://superuser.com/a/815317/316001
 # 0 -- vanilla completion (abc => abc)
 # 1 -- smart case completion (abc => Abc)

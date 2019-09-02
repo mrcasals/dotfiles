@@ -11,6 +11,9 @@ fpath=(/usr/local/share/zsh/site-functions $fpath)
 autoload -U compinit && compinit
 
 # pure prompt
+if [[ "$(uname)" = "Linux" ]] then
+  fpath+=('~/.asdf/installs/nodejs/12.9.1/.npm/lib/node_modules/pure-prompt/functions')
+fi
 autoload -U promptinit; promptinit
 prompt pure
 zstyle ':prompt:pure:prompt:success' color green

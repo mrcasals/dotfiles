@@ -11,13 +11,11 @@ task :install do
 
     link_file(file)
   end
-
-  system('cat zshrc >> ~/.zshrc')
 end
 
 def link_file(file)
   puts "linking ~/.#{file}"
-  system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+  system %Q{ln -fs "$PWD/#{file}" "$HOME/.#{file}"}
 end
 
 def create_local_config_file(file_name)

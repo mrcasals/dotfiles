@@ -45,22 +45,27 @@ IRB.conf[:HISTORY_FILE] = "~/.irb_history"
 # Loading extensions of the console. This is wrapped
 # because some might not be included in your Gemfile
 # and errors will be raised
-def extend_console(name, care = true, required = true)
-  if care
-    require name if required
-    yield if block_given?
-    $console_extensions << "#{ANSI[:GREEN]}#{name}#{ANSI[:RESET]}"
+def extend_console(name, highlighted = true, required = false)
+  require name if required
+  yield if block_given?
+
+  if highlighted
+    $console_extensions << "#{ANSI[:BLUE]}#{name}#{ANSI[:RESET]}"
   else
-    $console_extensions << "#{ANSI[:GRAY]}#{name}#{ANSI[:RESET]}"
+    $console_extensions << "#{ANSI[:YELLOW]}#{name}#{ANSI[:RESET]}"
   end
 rescue LoadError
   $console_extensions << "#{ANSI[:RED]}#{name}#{ANSI[:RESET]}"
 end
 $console_extensions = []
 
+extend_console "autocompletion"
+extend_console "session_history"
+extend_console "global_history"
+
 # Add a method pm that shows every method on an object
 # Pass a regex to filter these
-extend_console 'pm', true, false do
+extend_console 'pm' do
   def pm(obj, *options) # Print methods
     methods = obj.methods
     methods -= Object.methods unless options.include? :more
@@ -89,6 +94,51 @@ extend_console 'pm', true, false do
       print "   #{ANSI[:GRAY]}#{item[2]}#{ANSI[:RESET]}\n"
     end
     data.size
+  end
+end
+
+extend_console "h", false do
+  def h(extension_name = :h)
+    case extension_name
+    when :h
+      print <<~DOC
+      # USAGE: `h(extension_name)`.
+      #
+      # Prints docs for a given console extension.
+      DOC
+    when :pm
+      print <<~DOC
+        # pm(obj, *options)
+        #
+        # Lists the methods for the given object. By default, all
+        # `Object.methods` are omitted.
+        #
+        # obj - the object to debug
+        # options - a list of extra options. Available options are:
+        #   <a regexp> - lists only the methods matching the regexp
+        #   :more - Outputs all public methods from the object.
+      DOC
+    when :session_history
+      print <<~DOC
+      # Use `__` (double underscore) to list all the session return values
+      # used. You can use `__[2]` to get the 2nd returned value, or `__[-2]` to
+      # get the previous-to-last returned value.
+      DOC
+    when :global_history
+      print <<~DOC
+      # Use <UP> and <DOWN> keys to navigate global IRb history. It's
+      # cross-session.
+      DOC
+    when :autocompletion
+      print <<~DOC
+      # 1.neg<tab> => 1.negative?
+      #
+      # Autocompletes the current word with known methods and variables.
+      DOC
+    else
+      print "Unknown extension or missing docs"
+    end
+    print "\n"
   end
 end
 

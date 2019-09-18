@@ -136,7 +136,7 @@ extend_console "h", false do
       # Autocompletes the current word with known methods and variables.
       DOC
     else
-      print "Unknown extension or missing docs"
+      system("ri", extension_name.to_s)
     end
     print "\n"
   end

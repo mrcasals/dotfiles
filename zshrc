@@ -15,8 +15,8 @@ if [[ `uname` = "Linux" ]]; then
   /home/linuxbrew/.linuxbrew/opt/asdf/asdf.sh
   /home/linuxbrew/.linuxbrew/opt/asdf/etc/bash_completion.d/asdf.bash
 else
-  /usr/local/opt/asdf/asdf.sh
-  /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+  . /usr/local/opt/asdf/asdf.sh
+  . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 fi
 
 # pure prompt

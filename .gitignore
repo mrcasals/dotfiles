@@ -9,3 +9,4 @@
 .elixir_ls/
 .vscode/
 .config/bundle
+.config/.netrwhist

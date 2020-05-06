@@ -67,3 +67,6 @@ setopt incappendhistory     #Immediately append to the history file, not just wh
 # setopt hist_verify            # show command with history expansion to user before running it
 # setopt inc_append_history     # add commands to HISTFILE in order of execution
 # setopt share_history # share command history data
+
+# Avoid "Too many files open" error from fsevent
+ulimit -n 8192

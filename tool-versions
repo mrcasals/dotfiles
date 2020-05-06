@@ -1,4 +1,5 @@
-ruby 2.6.4
-elixir 1.9.1
+ruby 2.7.0
+elixir 1.10.2
 nodejs 12.9.1
 rust 1.37.0
+crystal 0.33.0

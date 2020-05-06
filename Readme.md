@@ -10,6 +10,8 @@ cd ~/.dotfiles
 rake install
 ```
 
+Install [vim-plug](https://github.com/junegunn/vim-plug) manually and then run `:PlugInstall`
+
 ## Using your own config along
 
 ```
@@ -17,4 +19,5 @@ rake install
 ```
 
 Here you can add your own mapping without risking to lose them when updating the repo :)
+
 

@@ -70,3 +70,8 @@ setopt incappendhistory     #Immediately append to the history file, not just wh
 
 # Avoid "Too many files open" error from fsevent
 ulimit -n 8192
+
+# base16 autocompletion
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+

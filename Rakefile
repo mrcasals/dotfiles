@@ -1,24 +1,36 @@
 require 'rake'
 require 'erb'
 
+def path_files(path)
+  FileList[path].include(".*").exclude(".", "..")
+end
+
+excludes = %w(
+  RakeFile
+  *.itermcolors
+  Readme*
+  .config
+  zsh
+)
+
 desc "install the dot files into user's home directory"
 task :install do
   create_local_config_file("zshrc")
   create_local_config_file("gitconfig")
 
-  Dir['*'].each do |file|
-    next if %w[config Rakefile README Readme itermcolors LICENSE zsh].include? file
+  path_files(".").exclude(excludes).each do |file|
+    next if %w[config Rakefile Readme.md itermcolors].include? file
 
-    link_file(file, ".")
+    link_file(file)
   end
 
   system "mkdir -p ~/.config"
-  Dir['.config/*'].each do |file|
-    link_file(file, ".config/")
+  path_files(".config").each do |file|
+    link_file(file)
   end
 end
 
-def link_file(file, prefix)
+def link_file(file)
   puts "linking ~/#{file}"
   system %Q{ln -fs "$PWD/#{file}" "$HOME/#{file}"}
 end

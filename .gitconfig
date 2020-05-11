@@ -9,7 +9,7 @@
   tool = vimdiff
 [core]
   excludesfile = ~/.gitignore
-  editor = vim
+  editor = nvim
   autocrlf = input
   pager = less -+F -c -+X
 [apply]
@@ -17,7 +17,7 @@
 [format]
   pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true

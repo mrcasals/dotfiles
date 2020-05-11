@@ -10,6 +10,7 @@ excludes = %w(
   *.itermcolors
   Readme*
   .config
+  .git
   zsh
 )
 

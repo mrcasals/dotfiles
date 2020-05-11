@@ -7,15 +7,20 @@ task :install do
   create_local_config_file("gitconfig")
 
   Dir['*'].each do |file|
-    next if %w[Rakefile README.rdoc Readme.rdoc LICENSE zsh].include? file
+    next if %w[config Rakefile README Readme itermcolors LICENSE zsh].include? file
 
-    link_file(file)
+    link_file(file, ".")
+  end
+
+  system "mkdir -p ~/.config"
+  Dir['.config/*'].each do |file|
+    link_file(file, ".config/")
   end
 end
 
-def link_file(file)
-  puts "linking ~/.#{file}"
-  system %Q{ln -fs "$PWD/#{file}" "$HOME/.#{file}"}
+def link_file(file, prefix)
+  puts "linking ~/#{file}"
+  system %Q{ln -fs "$PWD/#{file}" "$HOME/#{file}"}
 end
 
 def create_local_config_file(file_name)

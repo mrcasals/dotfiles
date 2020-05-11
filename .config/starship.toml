@@ -1,0 +1,14 @@
+[aws]
+disabled = true
+
+[crystal]
+disabled = true
+
+[ruby]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[package]
+disabled = true

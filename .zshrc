@@ -19,13 +19,8 @@ else
   . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 fi
 
-# pure prompt
-if [[ `uname` = "Linux" ]]; then
-  fpath+=(`npm root -g`/pure-prompt/functions)
-fi
-autoload -U promptinit; promptinit
-prompt pure
-zstyle ':prompt:pure:prompt:success' color green
+# starship prompt
+eval "$(starship init zsh)"
 
 # zsh highlighting for pure prompt
 if [[ `uname` = "Linux" ]]; then

@@ -8,5 +8,8 @@
 
 .elixir_ls/
 .vscode/
-.config/bundle
-.config/.netrwhist
+.config/nvim/bundle
+.config/nvim/.netrwhist
+.config/gcloud
+.config/configstore
+.config/base16-shell/

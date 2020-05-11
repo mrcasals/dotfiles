@@ -29,6 +29,11 @@ task :install do
   path_files(".config").each do |file|
     link_file(file)
   end
+
+  system "mkdir -p ~/.config/nvim"
+  path_files(".config/nvim").each do |file|
+    link_file(file)
+  end
 end
 
 def link_file(file)

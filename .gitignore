@@ -13,3 +13,5 @@
 .config/gcloud
 .config/configstore
 .config/base16-shell/
+.config/gh
+.config/hub

@@ -70,3 +70,9 @@ ulimit -n 8192
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
+# Expand history on space
+# Eg. `!! ` will automatically get expanded to the last command
+#     `!echo ` will get expanded to the last command matching `echo`
+#     `!-2 ` will get expanded to the second to last command
+bindkey " " magic-space
+

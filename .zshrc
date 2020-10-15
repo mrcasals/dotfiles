@@ -4,7 +4,7 @@ source ~/.dotfiles/zsh/config
 
 source ~/.zshrc.local
 
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+[ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 fpath=(~/.zsh/completions $fpath)
 fpath=(/usr/local/share/zsh/site-functions $fpath)

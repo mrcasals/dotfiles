@@ -38,6 +38,11 @@ alias heorku="heroku"
 # Reload ZSH config file
 alias reload!='source ~/.zshrc'
 
+# Attach or create tmux session based on the current folder name
+function tm() {
+  tmux new -As $(basename $PWD)
+}
+
 function git_current_branch() {
   local ref
   ref=$(command git symbolic-ref --quiet HEAD 2> /dev/null)

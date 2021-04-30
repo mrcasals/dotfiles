@@ -9,3 +9,6 @@ export HISTCONTROL=erasedups
 export PROMPT_COMMAND='history -a'  # write previous line as prompt is displayed
 export CLICOLOR=1
 export PATH=/usr/local/bin:$PATH:$HOME/.dotfiles/bin
+
+# Speedup for `bundle install`
+export MAKE="make --jobs 8"
